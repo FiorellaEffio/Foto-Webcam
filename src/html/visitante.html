@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="../img/logofondo.png" type="image/x-icon">
+  <title>Comunal•Visitor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css" />
+  <link rel="stylesheet" href="../css/visitante.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <!-- Agregar logo malena -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7">
+        <form id="form-users">
+          <div class="form-group">
+            <label for="users-mame">Nombres </label>
+            <input type="text" value="" class="form-control" id="users-mame">
+          </div>
+          <div class="form-group">
+            <label for="users-last-name">Apellidos </label>
+            <input type="text" value="" class="form-control" id="users-last-name">
+          </div>
+          <div class="form-group">
+            <label for="users-dni">DNI </label>
+            <input type="text" value="" class="form-control" id="users-dni">
+            <span id="dniOK"></span>
+          </div>
+          <div class="input-field col s12">
+            <select id="mySelect">
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+            <label>Materialize Select</label>
+          </div>
+          <div class="form-group">
+            <label for="users-anfitrion">Anfitrión</label>
+            <input type="text" value="" class="form-control" id="users-anfitrion">
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="users-email">E-mail</label>
+            <input type="text" value="" class="form-control" id="users-email">
+            <span id="emailOK"></span>
+          </div>
+          <br>
+          <input type="submit" name="" value="Enviar solicitud de visita" id="Enviar-Update">
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('select').formSelect();
+    });
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script src="../js/conexion.js"></script>
+  <script src="../js/validandoVisitante.js"></script>
+</body>
+</html>
