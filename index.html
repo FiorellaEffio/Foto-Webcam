@@ -11,6 +11,7 @@
   <canvas id="micanvas" width="200" height="200"></canvas>
   <br>
   <button id="generarblob">Subir</button>
+  <div id="divImagenesStorage"></div>
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script>
     // Conexion Firebase
@@ -39,8 +40,6 @@
       var blob = video.src;
     });
 
-  </script>
-  <script>
     document.getElementById('generarblob').addEventListener('click', function() {
       //genero un blob del canvas
       myCanvas.toBlob(function(blob) {
@@ -52,6 +51,14 @@
       var uploadTask = firebase.storage().ref('Photos/');
       uploadTask.child('fiore.jpg').put(blob);
     }
+    var storageRef = firebase.storage().ref("Photos/fiore.jpg");
+    storageRef.getDownloadURL().then(function(url) {
+      console.log(url);
+      document.getElementById('divImagenesStorage').innerHTML = `<img src=${url} />`;
+    });
+
+
+
   </script>
 </body>
 </html>
