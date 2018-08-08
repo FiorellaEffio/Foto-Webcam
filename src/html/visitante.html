@@ -11,13 +11,13 @@
 </head>
 <body>
   <!-- Agregar logo malena -->
-  <div class="container">
+  <div class="container" id="mainSection">
     <div class="row">
       <div class="col-sm-7">
         <form id="form-users">
           <div class="form-group">
             <label for="users-mame">Nombres </label>
-            <input type="text" value="" class="form-control" id="users-mame">
+            <input type="text" value="" class="form-control" id="users-name">
           </div>
           <div class="form-group">
             <label for="users-last-name">Apellidos </label>
@@ -42,15 +42,25 @@
             <span id="emailOK"></span>
           </div>
           <br>
-          <input type="submit" name="" value="Enviar solicitud de visita" id="Enviar-Update">
+          <input type="button" name="" value="Siguiente" id="next-Photo">
         </form>
       </div>
     </div>
   </div>
+  <div id="photoSection">
+    <video id="myVideo" width="200" height="200" autoplay></video>
+    <br>
+    <button id="snap">Take photo</button>
+    <canvas id="micanvas" width="200" height="200"></canvas>
+    <br>
+    <button id="generarblob">Subir</button>
+  </div>
+
 
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script src="../js/firebase.js"></script>
   <script src="../js/validandoVisitante.js"></script>
   <script src="../js/selectOptionsVisitante.js"></script>
+  <script src="../js/takeSnapshotPhotoVisitante.js"></script>
 </body>
 </html>
